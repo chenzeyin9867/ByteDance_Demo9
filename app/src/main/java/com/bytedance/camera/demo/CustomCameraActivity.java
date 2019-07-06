@@ -19,7 +19,7 @@ import java.util.List;
 import static com.bytedance.camera.demo.utils.Utils.MEDIA_TYPE_IMAGE;
 import static com.bytedance.camera.demo.utils.Utils.getOutputMediaFile;
 
-public class CustomCameraActivity extends AppCompatActivity implements SurfaceHolder.Callback {
+public class CustomCameraActivity extends AppCompatActivity {
 
     private SurfaceView mSurfaceView;
     private Camera mCamera;
@@ -139,20 +139,6 @@ public class CustomCameraActivity extends AppCompatActivity implements SurfaceHo
 
     private void releaseMediaRecorder() {
         //todo 释放MediaRecorder
-    }
-
-    @Override
-    public void surfaceCreated(SurfaceHolder holder) {
-        startPreview(holder);
-    }
-
-    @Override
-    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-    }
-
-    @Override
-    public void surfaceDestroyed(SurfaceHolder holder) {
-        //todo 释放Camera和MediaRecorder资源
     }
 
 
